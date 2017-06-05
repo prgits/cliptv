@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 5px;
+  border: none;
+  height: 80px;
+  max-width: none;
+  line-height: 80px;
+  vertical-align: middle;
+  padding: 0;
+  text-align: center;
+  font-size: 26px;
+}
+
+a.btn-gray:focus {
+  background: linear-gradient(to right, #f56b27, #ee4040);
+  color: #fff;
+}
