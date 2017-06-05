@@ -16,7 +16,7 @@ a {
   font-size: 26px;
 }
 
-a.btn-gray:focus {
+a.btn-gray.focus {
   background: linear-gradient(to right, #f56b27, #ee4040);
   color: #fff;
 }

@@ -6,7 +6,7 @@
 }
 .welcome-content{
   width: 100%;
-  position: absolute;
+  position: fixed;
   top: 60%;
   padding-left: 7.03125%;
 }
