@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {KEYMAP} from '../../utils/keymap';
 import {
@@ -12,11 +13,10 @@ class Home extends Component {
   constructor( props ) {
     super( props );
     this.state = {
-      focus: {x: 0, y: 0},
+      focus:{x: 0, y: 0},
       minX: 0,
-      maxX: 1,
+      maxX: 1
     };
-
     this.handleKeyControl = this.handleKeyControl.bind(this);
   }
 
@@ -25,10 +25,12 @@ class Home extends Component {
     const keyCode = event.keyCode;
     switch (keyCode) {
       case KEYMAP.RIGHT:
-        this.setState({focus: moveRight(this.state.focus, this.state.maxX)});
+        if(this.state.focus.x < this.state.maxX)
+          this.setState({focus: moveRight(this.state.focus)});
         break;
       case KEYMAP.LEFT:
-        this.setState({focus: moveLeft(this.state.focus, this.state.minX)});
+        if(this.state.focus.x > this.state.minX)
+          this.setState({focus: moveLeft(this.state.focus, this.state.minX)});
         break;
       case KEYMAP.ENTER:
         Enter();
@@ -66,5 +68,20 @@ class Home extends Component {
     );
   }
 }
+
+Home.propTypes = {
+  focus: PropTypes.shape({
+    x: PropTypes.number.isRequired,
+    y: PropTypes.number.isRequired,
+  }).isRequired,
+  minX: PropTypes.number.isRequired,
+  maxX: PropTypes.number.isRequired
+};
+
+Home.defaultProps={
+  focus:{x: 0, y: 0},
+  minX: 0,
+  maxX: 1
+};
 
 export default Home;

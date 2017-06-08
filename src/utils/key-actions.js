@@ -1,12 +1,24 @@
-export function moveLeft(p, min) {
-  p.x = (p.x - 1 >= min) ? (p.x - 1) : min;
+export function moveLeft(p) {
+  p.x = p.x - 1;
   p.y = p.y;
   return p;
 }
 
-export function moveRight(p, max) {
-  p.x = (p.x + 1 <= max) ? (p.x + 1) : max;
+export function moveRight(p) {
+  p.x = p.x + 1;
   p.y = p.y;
+  return p;
+}
+
+export function moveUp(p) {
+  p.x = p.x;
+  p.y = p.y - 1;
+  return p;
+}
+
+export function moveDown(p) {
+  p.x = p.x;
+  p.y = p.y + 1;
   return p;
 }
 
