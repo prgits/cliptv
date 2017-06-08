@@ -7,9 +7,9 @@ import {
   moveRight,
   Enter
 } from '../../utils/key-actions';
-import './Home.css';
+import './Welcome.css';
 
-class Home extends Component {
+class Welcome extends Component {
   constructor( props ) {
     super( props );
     this.state = {
@@ -69,7 +69,7 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {
+Welcome.propTypes = {
   focus: PropTypes.shape({
     x: PropTypes.number.isRequired,
     y: PropTypes.number.isRequired,
@@ -78,10 +78,10 @@ Home.propTypes = {
   maxX: PropTypes.number.isRequired
 };
 
-Home.defaultProps={
+Welcome.defaultProps={
   focus:{x: 0, y: 0},
   minX: 0,
   maxX: 1
 };
 
-export default Home;
+export default Welcome;

@@ -51,6 +51,7 @@ class Login extends Component {
         Enter();
         break;
       default:
+        Enter();
         break;
     }
   };
@@ -89,7 +90,7 @@ class Login extends Component {
     return (
       <div className="login">
         <div className="login-form">
-          <input type="text" className="login-data" ref={node => {input = node}} readOnly value={this.state.data} /><br />
+          <input type="text" className="login-data" ref={node => {input = node}} value={this.state.data} /><br />
           <button type="submit" className={
             (this.state.focus.x <= this.state.maxX && this.state.focus.y === 0) ? 'btn btn-gray submit-login focus' :
               'btn btn-gray submit-login'

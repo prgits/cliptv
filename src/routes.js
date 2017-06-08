@@ -3,7 +3,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Home from './components/Home/Home';
+import Welcome from './components/Welcome/Welcome';
 import RegisterTrial from './components/RegisterTrial/RegisterTrial';
 import Login from './components/Login/Login';
 import TrackList from './components/TrackList/index';
@@ -16,7 +16,7 @@ class AllRoutes extends Component{
           <Route path="/track-list" component={TrackList}/>
           <Route path="/register-trial" component={RegisterTrial}/>
           <Route path="/login" component={Login}/>
-          <Route path="/" component={Home}/>
+          <Route path="/" component={Welcome}/>
         </Switch>
       </div>
     )
