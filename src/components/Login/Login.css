@@ -54,3 +54,37 @@
 .login .key-del.focus{
   background: #e0e0e0 url(./images/ic_backspace.png) no-repeat center;
 }
+
+.otp{
+  margin-top: 8%;
+}
+.otp .text-center{
+  width: 25.520833333%;
+  margin: 0 auto;
+  font-size: 30px;
+  color: #fff;
+}
+.otp .submit-login.next{
+  margin-top: 10px;
+}
+.otp .user-data{
+  margin-top: 30px;
+}
+.otp input.otp-code{
+  width: 110px;
+  height: 110px;
+  line-height: 106px!important;
+  vertical-align: middle;
+  background-color: #0c0c0c;
+  border: 2px solid #2e2e2e;
+  box-sizing: border-box;
+  margin: auto 0 auto 16px;
+  font-size: 60px!important;
+  color: #fff;
+  text-align: center;
+  background: transparent;
+}
+
+.otp input.otp-code:first-child{
+  margin-left: 0;
+}

@@ -1,0 +1,24 @@
+
+.virtual-keyboard .key-item{
+  width: 68px !important;
+  height: 68px !important;
+  line-height: 68px !important;
+  vertical-align: middle;
+  margin: 0 0 0 5px;
+  padding: 0;
+  border-radius: 4px;
+  transition: transform 0.2s ease-out;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+.virtual-keyboard .key-item.focus{
+  background: #e0e0e0;
+  color: #222222;
+}
+.virtual-keyboard .key-del{
+  background: #222222 url(./images/ic_backspace.png) no-repeat center;
+}
+.virtual-keyboard .key-del.focus{
+  background: #e0e0e0 url(./images/ic_backspace.png) no-repeat center;
+}
